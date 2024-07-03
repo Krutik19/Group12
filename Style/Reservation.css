@@ -1,0 +1,45 @@
+.form-reservation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.form-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-form {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.2);
+}
+
+.btn-submit:hover {
+    background-color: #e52b34;
+    color: #fff;
+    border: 1px solid #080808;
+}
+
+.btn-submit {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+
+}
+
+.btn-reservation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.notification {
+    background-color: #48f342;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 6px solid #4CAF50; 
+    display: none; 
+}
