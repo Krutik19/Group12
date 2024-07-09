@@ -3,7 +3,7 @@
 hello! So, this is Taste_it restaurants.
 
 1) taste_itDb.php is website's database So, first we have to run this to create database in our PC.
-  - it creates new database without any data so add data to display on website.
+  - it creates new database without any  Category, Products and Chefs So, add it to display on website.
 
 2) make sure you xampp is running using MySql and Apache server.
 
