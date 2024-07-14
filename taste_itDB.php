@@ -73,7 +73,8 @@ $tables = [
         chef_id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         bio TEXT,
-        specialty VARCHAR(255)
+        specialty VARCHAR(255),
+        image_url VARCHAR(255)
     )",
     "CREATE TABLE IF NOT EXISTS Cart_Items (
         cart_item_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -111,5 +112,68 @@ foreach ($tables as $table_sql) {
     }
 }
 
+// Add initial user to Users table
+$default_user_email = 'admin@example.com';
+$default_user_password_hash = password_hash('password123', PASSWORD_DEFAULT); // Hashed password
+
+$insert_user_sql = "INSERT INTO Users (email, password_hash) VALUES (?, ?)";
+$stmt = $conn->prepare($insert_user_sql);
+$stmt->bind_param('ss', $default_user_email, $default_user_password_hash);
+
+if ($stmt->execute()) {
+    echo "Default user inserted successfully\n";
+} else {
+    echo "Error inserting default user: " . $conn->error . "\n";
+}
+
+
+// Add initial values to Categories
+$categories = [
+    "INSERT INTO Categories (category_name) VALUES ('Appetizers')",
+    "INSERT INTO Categories (category_name) VALUES ('Main Courses')",
+    "INSERT INTO Categories (category_name) VALUES ('Desserts')"
+];
+
+foreach ($categories as $category_sql) {
+    if ($conn->query($category_sql) === TRUE) {
+        echo "Category inserted successfully: " . $category_sql . "\n";
+    } else {
+        echo "Error inserting category: " . $conn->error . "\n";
+    }
+}
+
+// Add initial values to Menu_Items
+$menu_items = [
+    "INSERT INTO Menu_Items (category_id, item_name, description, price, image_url) VALUES (1, 'Spring Rolls', 'Crispy vegetarian spring rolls.', 5.99, 'https://cdn.pixabay.com/photo/2018/03/15/12/16/food-3228057_640.jpg')",
+    "INSERT INTO Menu_Items (category_id, item_name, description, price, image_url) VALUES (1, 'Garlic Bread', 'Toasted bread with garlic and herbs.', 3.99, 'https://i0.wp.com/comfortandpeasant.com/wp-content/uploads/2023/11/Garlic-bread-2-2036.jpg?resize=640%2C427&ssl=1')",
+    "INSERT INTO Menu_Items (category_id, item_name, description, price, image_url) VALUES (2, 'Spaghetti Carbonara', 'Classic Italian pasta dish with creamy sauce.', 12.99, 'https://i0.wp.com/chefmimiblog.com/wp-content/uploads/2022/02/MG_2540.jpg?fit=640%2C427&ssl=1')",
+    "INSERT INTO Menu_Items (category_id, item_name, description, price, image_url) VALUES (2, 'Grilled Chicken', 'Juicy grilled chicken with side vegetables.', 15.99, 'https://i0.wp.com/smittenkitchen.com/wp-content/uploads/2019/05/img_0540.jpg?resize=640%2C427&ssl=1')",
+    "INSERT INTO Menu_Items (category_id, item_name, description, price, image_url) VALUES (3, 'Chocolate Cake', 'Rich chocolate cake with frosting.', 6.99, 'https://i0.wp.com/live.staticflickr.com/65535/53041757984_80d08ba74e_z.jpg?resize=640%2C427&ssl=1')"
+];
+
+foreach ($menu_items as $menu_item_sql) {
+    if ($conn->query($menu_item_sql) === TRUE) {
+        echo "Menu item inserted successfully: " . $menu_item_sql . "\n";
+    } else {
+        echo "Error inserting menu item: " . $conn->error . "\n";
+    }
+}
+
+// Add initial values to Chefs
+$chefs = [
+    "INSERT INTO Chefs (name, bio, specialty, image_url) VALUES ('Hiroshi Tanaka', 'Sushi and Sashimi. Chef Tanaka is famous for his meticulous knife skills and innovative sushi rolls, blending traditional Japanese techniques with modern flavors.', 'Japanese Food', 'https://pbs.twimg.com/media/GRo35jea4AAYMRa.jpg')",
+    "INSERT INTO Chefs (name, bio, specialty, image_url) VALUES ('Isabella Rossi', 'Traditional Italian Cuisine, particularly homemade pasta and classic sauces. Chef Rossi is renowned for her authentic lasagna and tiramisu.', 'Italian Food', 'https://culinarylabschool.com/wp-content/uploads/2019/06/Pros-and-cons-to-working-in-culinary-arts-CulinaryLab-School.jpg')",
+    "INSERT INTO Chefs (name, bio, specialty, image_url) VALUES ('Axer Patel', 'French Patisserie and Fusion Desserts. Chef Patel excels in creating delicate pastries such as macarons, éclairs, and fusion desserts that incorporate flavors from his Indian heritage.', 'French Food', 'https://t3.ftcdn.net/jpg/02/65/16/18/360_F_265161867_nUORzZ1sfwADG6RoOsCPdf81KKYQdD3G.jpg')"
+];
+
+foreach ($chefs as $chef_sql) {
+    if ($conn->query($chef_sql) === TRUE) {
+        echo "Chef inserted successfully: " . $chef_sql . "\n";
+    } else {
+        echo "Error inserting chef: " . $conn->error . "\n";
+    }
+}
+
+$stmt->close();
 $conn->close();
 ?>
