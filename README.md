@@ -9,4 +9,4 @@ hello! So, this is Taste_it restaurants.
 
 3) this folder should be in the c:/xampp/htdocs directory.
 
-4) run the index.php page using this link http://localhost/Group 12/Views/index.php in your browser.
+4) run the index.php page using this link http://localhost/Group_12/Views/index.php in your browser.
