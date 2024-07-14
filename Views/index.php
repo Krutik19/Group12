@@ -34,8 +34,9 @@ include '../Back-End/session_check.php';
                         <p class="phone"><span>Phone no:</span><a href="#"> +1 28654 35647 </a> or <span>email us:
                             </span><a href="#"> taste.it@email.com</a></p>
                     </div>
-                    <div class="nav-date">
-                        <p class="date">Mon-Fri/9:00-21:00, Sat-Sun/10:00-20:00</p>
+                    <div class="info">
+                      <div id="time"></div>
+                      <div id="weather"></div>
                     </div>
                 </div>
             </div>
@@ -153,5 +154,6 @@ include '../Back-End/session_check.php';
     <footer>
       <?php include 'Footer.php'; ?>
     </footer>
+    <script src="../Js/time-weather API.js"></script>
   </body>
 </html>
