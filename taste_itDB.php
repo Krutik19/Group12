@@ -112,7 +112,6 @@ foreach ($tables as $table_sql) {
     }
 }
 
-
 // Add initial user to Users table
 $default_user_email = 'admin@example.com';
 $default_user_password_hash = password_hash('password123', PASSWORD_DEFAULT); // Hashed password
