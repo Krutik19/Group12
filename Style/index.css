@@ -147,6 +147,7 @@ body {
     text-decoration: none;
 }
 
+
 .navbar {
     background: transparent !important;
     z-index: 2;
@@ -492,11 +493,6 @@ footer .list-unstyled li span {
     justify-content: end;
 }
 
-.nav-date {
-    justify-content: center;
-    display: flex;
-}
-
 .nav-top {
     display: flex;
     justify-content: space-between;
@@ -547,7 +543,7 @@ footer .list-unstyled li span {
 .contact-top {
     position: relative;
     z-index: 11;
-    padding: 15px;
+    padding: 5px;
 }
 .info-container{
     height: 600px;
@@ -556,3 +552,4 @@ footer .list-unstyled li span {
     color: #fff;
     font-size: x-large;
 }
+
