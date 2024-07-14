@@ -1,5 +1,5 @@
 <?php
-session_start();
+include '../Back-End/session_check.php';
 ?>
 
 <!DOCTYPE html>
