@@ -1,3 +1,7 @@
+<?php
+include '../Back-End/session_check.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,60 +83,14 @@
                     <h2 class="book-head">Our Master Chef</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="staff-area">
-                    <div class="staff">
-                        <div class="staff-img"></div>
-                        <div class="text">
-                            <h3>Hiroshi Tanaka</h3>
-                            <p>Master on Japanese Food</p>
-                            <div>
-                                <p class="staff-para">Sushi and Sashimi. Chef Tanaka is famous for his meticulous knife skills and innovative sushi rolls, blending traditional Japanese techniques with modern flavors.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="staff-area">
-                    <div class="staff">
-                        <div class="staff-img1"></div>
-                        <div class="text">
-                            <h3>Isabella Rossi</h3>
-                            <p>Master on Italian Food</p>
-                            <div>
-                                <p class="staff-para">Traditional Italian Cuisine, particularly homemade pasta and classic sauces. Chef Rossi is renowned for her authentic lasagna and tiramisu.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="staff-area">
-                    <div class="staff">
-                        <div class="staff-img2"></div>
-                        <div class="text">
-                            <h3>Axer Patel</h3>
-                            <p>Master on French Food</p>
-                            <div>
-                                <p class="staff-para">French Patisserie and Fusion Desserts. Chef Patel excels in creating delicate pastries such as macarons, éclairs, and fusion desserts that incorporate flavors from his Indian heritage.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="staff-area">
-                    <div class="staff">
-                        <div class="staff-img3"></div>
-                        <div class="text">
-                            <h3>David Carter</h3>
-                            <p>Master on Barbecue</p>
-                            <div>
-                                <p class="staff-para">Barbecue and Smoked Meats. Chef Carter is celebrated for his slow-cooked ribs, brisket, and signature barbecue sauce, which have earned the restaurant numerous accolades.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="chef-container" class="row">
+            
             </div>
         </div>
     </section>
     <footer>
         <?php include 'Footer.php'; ?>
     </footer>
+    <script src='../Js/chef.js'></script> 
 </body>
 </html>

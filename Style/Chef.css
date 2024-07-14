@@ -11,7 +11,39 @@
 }
 .row{
     justify-content: center;
-    display: flex;
+    display: flex;.menu-section {
+        padding: 8em 0;
+        position: relative;
+    }
+    
+    .menu-title {
+        padding-bottom: 0.5rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+        margin: 5px;
+        padding: 2px;
+    }
+    
+    .row {
+        justify-content: center;
+        display: flex;
+    }
+    
+    .book-head {
+        margin-bottom: 4px;
+    }
+    
+    .text {
+        padding: 4px;
+        padding-top: 2px;
+    }
+    
+    #chef-container.grid-view {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
 }
 .book-head{
     margin-bottom: 4px;
