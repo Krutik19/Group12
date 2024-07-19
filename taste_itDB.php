@@ -56,6 +56,17 @@ $tables = [
         rating INT CHECK (rating BETWEEN 1 AND 5),
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )",
+    "CREATE TABLE IF NOT EXISTS CheckOut (
+        CheckOut_id INT AUTO_INCREMENT PRIMARY KEY,
+        FirstName VARCHAR(100) NOT NULL,
+        LastName VARCHAR(100) NOT NULL,
+        billingNumber INT,
+        Email VARCHAR(255) NOT NULL,
+        billingAddress VARCHAR(255) NOT NULL,
+        city TEXT,
+        zip VARCHAR(100),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )",
     "CREATE TABLE IF NOT EXISTS Categories (
         category_id INT AUTO_INCREMENT PRIMARY KEY,
         category_name VARCHAR(255) NOT NULL
