@@ -146,7 +146,7 @@ include '../Back-End/session_check.php';
         <div>
           <div class="book-div">
             <h2>We Make Delicious & Nutritious Food</h2>
-            <a href="Reservation.html">Book A Table Now</a>
+            <a href="Reservation.php">Book A Table Now</a>
           </div>
         </div>
       </div>
