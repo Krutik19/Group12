@@ -10,7 +10,7 @@ document.getElementById('categoryDropdown').addEventListener('change', function(
                 data.forEach(item => {
                     const card = document.createElement('div');
                     card.className = 'card';
-                    
+
                     const img = document.createElement('img');
                     img.src = item.image_url;
                     img.alt = item.item_name;
@@ -28,16 +28,19 @@ document.getElementById('categoryDropdown').addEventListener('change', function(
 
                     const cardPrice = document.createElement('p');
                     cardPrice.className = 'card-price';
+                    cardPrice.textContent = `$${item.price.toFixed(2)}`;
 
-                    if (typeof item.price === 'number') {
-                        cardPrice.textContent = `$${item.price.toFixed(2)}`;
-                    } else {
-                        cardPrice.textContent = 'Price not available';
-                    }
+                    // Add to Cart button
+                    const addToCartButton = document.createElement('button');
+                    addToCartButton.textContent = 'Add to Cart';
+                    addToCartButton.addEventListener('click', function() {
+                        addToCart(item.item_id, 1); // Adding 1 by default
+                    });
 
                     cardContent.appendChild(cardTitle);
                     cardContent.appendChild(cardDescription);
                     cardContent.appendChild(cardPrice);
+                    cardContent.appendChild(addToCartButton); // Append button to card
 
                     card.appendChild(img);
                     card.appendChild(cardContent);
@@ -51,3 +54,23 @@ document.getElementById('categoryDropdown').addEventListener('change', function(
         productsContainer.innerHTML = '';
     }
 });
+
+// Function to add an item to the cart
+function addToCart(itemId, quantity) {
+    fetch('../Back-End/Add_To_Cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ item_id: itemId, quantity: quantity }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Item added to cart!');
+        } else {
+            alert('Error adding item to cart: ' + data.message);
+        }
+    })
+    .catch(error => console.error('Error adding item to cart:', error));
+}
