@@ -10,7 +10,7 @@
     <div class="checkout-container">
         <h1>Checkout</h1>
         <div class="checkout-form">
-            <form>
+            <form  action="../Back-End/CheckOut.php" method="post">
                 <div class="section">
                     <h2>Billing and Shipping Details</h2>
                     <label for="billing-FirstName">First Name</label>
