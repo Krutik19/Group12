@@ -65,6 +65,7 @@ $tables = [
         billingAddress VARCHAR(255) NOT NULL,
         city TEXT,
         zip VARCHAR(100),
+        totalAmount DECIMAL(10, 2) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )",
     "CREATE TABLE IF NOT EXISTS Categories (
