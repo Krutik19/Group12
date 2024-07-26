@@ -32,9 +32,10 @@ document.getElementById('categoryDropdown').addEventListener('change', function(
 
                     // Add to Cart button
                     const addToCartButton = document.createElement('button');
+                    addToCartButton.className = 'add-to-cart-button';
                     addToCartButton.textContent = 'Add to Cart';
                     addToCartButton.addEventListener('click', function() {
-                        addToCart(item.item_id, 1); // Adding 1 by default
+                        addToCart(item.item_id, 1);
                     });
 
                     cardContent.appendChild(cardTitle);
