@@ -28,6 +28,7 @@ $tables = [
         user_id INT AUTO_INCREMENT PRIMARY KEY,
         email VARCHAR(255) NOT NULL UNIQUE,
         password_hash VARCHAR(255) NOT NULL,
+        is_admin BOOLEAN NOT NULL DEFAULT 0,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )",
     "CREATE TABLE IF NOT EXISTS Profiles (
@@ -54,6 +55,18 @@ $tables = [
         email VARCHAR(255) NOT NULL,
         review_text TEXT,
         rating INT CHECK (rating BETWEEN 1 AND 5),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )",
+    "CREATE TABLE IF NOT EXISTS CheckOut (
+        CheckOut_id INT AUTO_INCREMENT PRIMARY KEY,
+        FirstName VARCHAR(100) NOT NULL,
+        LastName VARCHAR(100) NOT NULL,
+        billingNumber INT,
+        Email VARCHAR(255) NOT NULL,
+        billingAddress VARCHAR(255) NOT NULL,
+        city TEXT,
+        zip VARCHAR(100),
+        totalAmount DECIMAL(10, 2) NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )",
     "CREATE TABLE IF NOT EXISTS Categories (
@@ -112,21 +125,6 @@ foreach ($tables as $table_sql) {
     }
 }
 
-// Add initial user to Users table
-$default_user_email = 'admin@example.com';
-$default_user_password_hash = password_hash('password123', PASSWORD_DEFAULT); // Hashed password
-
-$insert_user_sql = "INSERT INTO Users (email, password_hash) VALUES (?, ?)";
-$stmt = $conn->prepare($insert_user_sql);
-$stmt->bind_param('ss', $default_user_email, $default_user_password_hash);
-
-if ($stmt->execute()) {
-    echo "Default user inserted successfully\n";
-} else {
-    echo "Error inserting default user: " . $conn->error . "\n";
-}
-
-
 // Add initial values to Categories
 $categories = [
     "INSERT INTO Categories (category_name) VALUES ('Appetizers')",
@@ -174,6 +172,18 @@ foreach ($chefs as $chef_sql) {
     }
 }
 
-$stmt->close();
+// Insert an admin user
+$adminEmail = 'admin@example.com';
+$adminPassword = 'your_admin_password'; 
+$adminPasswordHash = password_hash($adminPassword, PASSWORD_DEFAULT);
+
+$admin_sql = "INSERT INTO Users (email, password_hash, is_admin) VALUES ('$adminEmail', '$adminPasswordHash', 1)";
+
+if ($conn->query($admin_sql) === TRUE) {
+    echo "Admin user inserted successfully\n";
+} else {
+    echo "Error inserting admin user: " . $conn->error . "\n";
+}
+
 $conn->close();
 ?>
