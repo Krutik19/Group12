@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #333;
+    margin: 0;
+    padding: 150px;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-container h1 {
+    color: #0072ff;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.profile-container p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.profile-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #0072ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.profile-container .btn:hover {
+    background-color: #005bb5;
+}
+
+.logout-form, .update-form {
+    margin-top: 20px;
+}
+
+.update-form input[type="text"], .update-form input[type="email"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.update-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-form button:hover {
+    background-color: #218838;
+}
+
+.success-message, .error-message {
+    font-size: 1em;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #28a745;
+}
+
+.error-message {
+    background-color: #dc3545;
+}

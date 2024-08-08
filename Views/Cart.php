@@ -36,6 +36,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="Cart.php">Cart</a>
                     </li>
+
+                    <li class="nav-item">
+                            <a class="nav-link" href="Profile.php">Profile</a>
+                        </li>
                 </ul>
             </div>
         </div>
