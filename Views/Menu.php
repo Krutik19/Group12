@@ -75,6 +75,10 @@ include '../Back-End/session_check.php';
                         <li class="nav-item">
                             <a class="nav-link" href="Cart.php">Cart</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Profile.php">Profile</a>
+                        </li>
                 </ul>
             </div>
         </div>
