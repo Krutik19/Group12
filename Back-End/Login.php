@@ -19,8 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password_hash'])) {
+            // Regenerate session ID
+            session_regenerate_id(true);
+            
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['is_admin'] = $row['is_admin'];
 
             // Get profile details
             $profileQuery = "SELECT * FROM profiles WHERE user_id = ?";
@@ -42,13 +46,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->close();
             $conn->close();
 
-            header("Location: ../Views/index.php");
+            if ($_SESSION['is_admin']) {
+                header("Location: ../Admin/View/DashBoard.php");
+            } else {
+                header("Location: ../Views/index.php");
+            }
             exit();
         } else {
-            $_SESSION['message'] = "Incorrect password.";
+            $_SESSION['message'] = "Incorrect email or password.";
         }
     } else {
-        $_SESSION['message'] = "No account found with that email.";
+        $_SESSION['message'] = "Incorrect email or password.";
     }
 
     $stmt->close();
