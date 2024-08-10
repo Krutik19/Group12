@@ -80,21 +80,5 @@
               </div>
             </div>
           </div>
-          <div class="grid-item foot-col">
-            <div class="foot-news">
-              <h2>Newsletter</h2>
-              <p>Join with us and get more discount on delivery</p>
-              <form action="#" class="sub-form">
-                <div class="form-group">
-                  <input
-                    type="email"
-                    class="form-control foot-input"
-                    placeholder="Enter email address"
-                  />
-                  <button class="form-control" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
