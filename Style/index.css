@@ -251,40 +251,8 @@ body {
     letter-spacing: 1px;
     margin-bottom: 25px;
 }
-
-.form-group {
-    position: relative;
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.foot-news {
-    margin-bottom: 18px;
-}
-
-.form-control {
-    outline: none;
-    background: #e52b34 !important;
-    box-shadow: none;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 2px;
-    color: rgba(255, 255, 255, 0.9) !important;
-    box-shadow: none !important;
-    padding: 0 16px;
-    margin-bottom: 16px;
-    text-align: center;
-    width: 100%;
-    cursor: pointer;
-}
-
 .input-wrap {
     position: relative;
-}
-
-.form-control::-webkit-input-placeholder {
-    color: #fff;
 }
 
 .btn {
@@ -428,7 +396,8 @@ footer .list-unstyled li span {
     margin-bottom: 20px;
 }
 .grid-container {
-    display: inline-grid;
+    justify-content: center;
+    display: flex;
     grid-template-columns: auto auto auto auto;
     column-gap: 25px;
 }
