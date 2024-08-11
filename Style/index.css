@@ -147,7 +147,6 @@ body {
     text-decoration: none;
 }
 
-
 .navbar {
     background: transparent !important;
     z-index: 2;
@@ -461,6 +460,11 @@ footer .list-unstyled li span {
     justify-content: end;
 }
 
+.nav-date {
+    justify-content: center;
+    display: flex;
+}
+
 .nav-top {
     display: flex;
     justify-content: space-between;
@@ -508,7 +512,7 @@ footer .list-unstyled li span {
 .contact-top {
     position: relative;
     z-index: 11;
-    padding: 5px;
+    padding: 15px;
 }
 .info-container{
     height: 600px;
@@ -516,4 +520,88 @@ footer .list-unstyled li span {
 .info-para-home{
     color: #fff;
     font-size: x-large;
+}
+
+
+@media (max-width: 1868px) {
+    .hero-img,
+    .hero-class {
+    height: 615px;
+    }
+    .carousel-caption{
+        top: 265px
+    }
+    .about-sec{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img{
+        width: auto;
+    }
+    .happy-para{
+        padding: 0px;
+    }
+    .grid-container{
+        column-gap: 70px;
+    }
+    
+
+}
+@media (max-width: 1148px) {
+    .nav-top{
+        flex-wrap: wrap
+    }
+    .container-fluid{
+        flex-direction: column;
+    }
+    .hero-img,
+    .hero-class {
+    height: 515px;
+    }
+    .carousel-caption{
+        top: 215px
+    }
+    .grid-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-container{
+        width: 60%;
+    }
+}
+@media (max-width: 656px) {
+    .info-para-home, .book-info{
+        font-size: 15px;
+    }
+    .book-head, .subheading{
+        font-size: 20px;
+    }
+    .about-img{
+        padding: 0px;
+    }
+    .navbar-nav{
+        flex-direction: column;
+        display: flex;
+    }
+    .navbar-brand{
+        padding: 0px;
+    }
+    .carousel-caption{
+        top: 415px
+    }
+    .hero-img,
+    .hero-class {
+    height: 715px;
+    }
+    .desktop-nav{
+        padding: 0px;
+        top: 70px;
+        position: relative;
+    }
+    .about-img{
+        overflow: hidden;
+    }
 }
