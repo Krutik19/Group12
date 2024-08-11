@@ -1,0 +1,112 @@
+.menu-section{
+    padding: 8em 0;
+    position: relative;
+}
+.menu-title{
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    margin: 5px;
+    padding: 2px;
+}
+.row{
+    justify-content: center;
+    display: flex;.menu-section {
+        padding: 8em 0;
+        position: relative;
+    }
+    
+    .menu-title {
+        padding-bottom: 0.5rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+        margin: 5px;
+        padding: 2px;
+    }
+    
+    .row {
+        justify-content: center;
+        display: flex;
+    }
+    
+    .book-head {
+        margin-bottom: 4px;
+    }
+    
+    .text {
+        padding: 4px;
+        padding-top: 2px;
+    }
+    
+    #chef-container.grid-view {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+}
+.book-head{
+    margin-bottom: 4px;
+}
+.text{
+    padding: 4px;
+    padding-top: 2px;
+}
+.staff{
+    position: relative;
+    z-index: 1;
+}
+.staff-area{
+    width: 21% !important;
+    padding: 15px;
+    margin: 28px;
+}
+.staff-img{
+    background-image: url(../image/chef-1.jpg);
+    height: 350px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.staff-img1{
+    background-image: url(../image/chef-2.jpg);
+    height: 350px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.staff-img2{
+    background-image: url(../image/chef-3.jpg);
+    height: 350px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.staff-img3{
+    background-image: url(../image/chef-4.jpg);
+    height: 350px;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.staff .text{
+    background-color: #fff;
+    width: 100%;
+}
+.staff .text h3{
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.8);
+}
+.staff .text p{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.staff-para{
+    color: #00000096 !important;
+    font-weight: 600;
+}
