@@ -37,7 +37,7 @@ body {
 
 .hero-img,
 .hero-class {
-    height: 1075px;
+    height: 100vh;
 }
 
 .caro-img {
@@ -85,6 +85,7 @@ body {
     font-size: 10vw;
     font-weight: 400;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .caro-subhead::before {
@@ -107,6 +108,7 @@ body {
     z-index: 0;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
 }
 
 .caro-subhead::after {
@@ -523,7 +525,7 @@ footer .list-unstyled li span {
 }
 
 
-@media (max-width: 1868px) {
+@media (max-width: 1468px) {
     .hero-img,
     .hero-class {
     height: 615px;
@@ -545,6 +547,9 @@ footer .list-unstyled li span {
     }
     .grid-container{
         column-gap: 70px;
+    }
+    .info-container{
+        width: 60%;
     }
     
 
