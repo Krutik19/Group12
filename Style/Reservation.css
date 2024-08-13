@@ -43,3 +43,31 @@
     border-left: 6px solid #4CAF50; 
     display: none; 
 }
+.form-group {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    outline: none;
+    background: #e52b34 !important;
+    box-shadow: none;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: none !important;
+    padding: 0 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+@media (max-width: 656px) {
+    .form-reservation{
+        position: relative
+    }
+}

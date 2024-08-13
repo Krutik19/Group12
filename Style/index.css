@@ -85,6 +85,7 @@ body {
     font-size: 10vw;
     font-weight: 400;
     margin-bottom: 40px;
+    position: relative;
 }
 
 .caro-subhead::before {
@@ -107,6 +108,7 @@ body {
     z-index: 0;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
 }
 
 .caro-subhead::after {
@@ -147,7 +149,6 @@ body {
     text-decoration: none;
 }
 
-
 .navbar {
     background: transparent !important;
     z-index: 2;
@@ -170,7 +171,6 @@ body {
 }
 
 .container-fluid {
-    width: 1110px;
     margin: 0 auto;
     padding: 0;
     background: rgba(0, 0, 0, 0.4);
@@ -251,40 +251,8 @@ body {
     letter-spacing: 1px;
     margin-bottom: 25px;
 }
-
-.form-group {
-    position: relative;
-    width: 100%;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.foot-news {
-    margin-bottom: 18px;
-}
-
-.form-control {
-    outline: none;
-    background: #e52b34 !important;
-    box-shadow: none;
-    height: 50px;
-    border: 1px solid white;
-    border-radius: 2px;
-    color: rgba(255, 255, 255, 0.9) !important;
-    box-shadow: none !important;
-    padding: 0 16px;
-    margin-bottom: 16px;
-    text-align: center;
-    width: 100%;
-    cursor: pointer;
-}
-
 .input-wrap {
     position: relative;
-}
-
-.form-control::-webkit-input-placeholder {
-    color: #fff;
 }
 
 .btn {
@@ -428,9 +396,10 @@ footer .list-unstyled li span {
     margin-bottom: 20px;
 }
 .grid-container {
-    display: inline-grid;
+    justify-content: center;
+    display: flex;
     grid-template-columns: auto auto auto auto;
-    column-gap: 25px;
+    column-gap: 170px;
 }
 
 .grid-item {
@@ -493,10 +462,14 @@ footer .list-unstyled li span {
     justify-content: end;
 }
 
+.nav-date {
+    justify-content: center;
+    display: flex;
+}
+
 .nav-top {
     display: flex;
     justify-content: space-between;
-    width: 1320px !important;
 }
 
 .container {
@@ -506,7 +479,6 @@ footer .list-unstyled li span {
 
 .hero-img {
     position: relative;
-    overflow: hidden;
 }
 
 .carousel-caption {
@@ -514,7 +486,6 @@ footer .list-unstyled li span {
     right: 15%;
     bottom: 1.25rem;
     left: 15%;
-    padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     color: #fff;
     text-align: center;
@@ -543,7 +514,7 @@ footer .list-unstyled li span {
 .contact-top {
     position: relative;
     z-index: 11;
-    padding: 5px;
+    padding: 15px;
 }
 .info-container{
     height: 600px;
@@ -553,3 +524,89 @@ footer .list-unstyled li span {
     font-size: x-large;
 }
 
+
+@media (max-width: 1468px) {
+    .hero-img,
+    .hero-class {
+    height: 615px;
+    }
+    .carousel-caption{
+        top: 265px
+    }
+    .about-sec{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-img{
+        width: auto;
+    }
+    .happy-para{
+        padding: 0px;
+    }
+    .grid-container{
+        column-gap: 70px;
+    }
+    .info-container{
+        width: 60%;
+    }
+    
+
+}
+@media (max-width: 1148px) {
+    .nav-top{
+        flex-wrap: wrap
+    }
+    .container-fluid{
+        flex-direction: column;
+    }
+    .hero-img,
+    .hero-class {
+    height: 515px;
+    }
+    .carousel-caption{
+        top: 215px
+    }
+    .grid-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-container{
+        width: 60%;
+    }
+}
+@media (max-width: 656px) {
+    .info-para-home, .book-info{
+        font-size: 15px;
+    }
+    .book-head, .subheading{
+        font-size: 20px;
+    }
+    .about-img{
+        padding: 0px;
+    }
+    .navbar-nav{
+        flex-direction: column;
+        display: flex;
+    }
+    .navbar-brand{
+        padding: 0px;
+    }
+    .carousel-caption{
+        top: 415px
+    }
+    .hero-img,
+    .hero-class {
+    height: 715px;
+    }
+    .desktop-nav{
+        padding: 0px;
+        top: 70px;
+        position: relative;
+    }
+    .about-img{
+        overflow: hidden;
+    }
+}
