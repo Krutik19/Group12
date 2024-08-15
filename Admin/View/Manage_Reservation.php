@@ -19,6 +19,7 @@ include '../../Admin/Back-End/ReservationOperations.php';
         <div class="navbar-links" id="navbarLinks">
             <ul>
                 <li><a href="../../Admin/View/DashBoard.php">Dashboard</a></li>
+                <li><a href="../../Admin/View/Manage_User.php">Manage Users</a></li>
                 <li><a href="../../Admin/View/Manage_Chef.php">Manage Chefs</a></li>
                 <li><a href="../../Admin/View/Manage_Menu.php">Manage Menu</a></li>
                 <li><a href="../../Admin/View/Manage_Reservation.php">Manage Reservations</a></li>
