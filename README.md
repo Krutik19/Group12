@@ -17,3 +17,5 @@ hello! So, this is Taste_it restaurants.
 
 7) if you face difficulty to go to admin side to user side please open this link one more time 
 http://menutaste.infinityfreeapp.com/Views/Login-Signup.php
+
+8) payment only accept real card information for ckecking you can use card number 4242 4242 4242 4242 and onther things can be random.
