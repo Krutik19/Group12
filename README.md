@@ -12,3 +12,8 @@ hello! So, this is Taste_it restaurants.
 4) run the index.php page using this link http://localhost/Group_12/Views/index.php in your browser.
 
 5) if there is any error occurs ==> drop taste_itDb database and run it again (step1)
+
+6) the id and password for admin side dashboard is id= admin@example.com and pass= your_admin_password
+
+7) if you face difficulty to go to admin side to user side please open this link one more time 
+http://menutaste.infinityfreeapp.com/Views/Login-Signup.php
