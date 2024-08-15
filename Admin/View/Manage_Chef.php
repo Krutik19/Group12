@@ -21,6 +21,7 @@ include '../../Admin/Back-End/ChefOperations.php';
         <div class="navbar-links" id="navbarLinks">
             <ul>
                 <li><a href="../../Admin/View/DashBoard.php">Dashboard</a></li>
+                <li><a href="../../Admin/View/Manage_User.php">Manage Users</a></li>
                 <li><a href="../../Admin/View/Manage_Chef.php">Manage Chefs</a></li>
                 <li><a href="../../Admin/View/Manage_Menu.php">Manage Menu</a></li>
                 <li><a href="../../Admin/View/Manage_Reservation.php">Manage Reservations</a></li>
@@ -46,6 +47,7 @@ include '../../Admin/Back-End/ChefOperations.php';
             <?php endforeach; ?>
         </div>
 
+        <!-- Add New Chef Form -->
         <div class="form-container" id="add-chef-form" style="display: none;">
             <h2>Add New Chef</h2>
             <form method="post" action="Manage_Chef.php">
@@ -66,6 +68,7 @@ include '../../Admin/Back-End/ChefOperations.php';
             </form>
         </div>
 
+        <!-- Update Chef Form -->
         <div class="form-container" id="update-chef-form" style="display: none;">
             <h2>Update Chef</h2>
             <form method="post" action="Manage_Chef.php" onsubmit="return submitUpdateForm();">
