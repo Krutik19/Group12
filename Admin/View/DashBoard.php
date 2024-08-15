@@ -1,6 +1,12 @@
 <?php
 // Include the database connection
 include '../../Back-End/DBConnection.php';
+if (isset($_GET['action']) && $_GET['action'] == 'logout') {
+    session_unset();
+    session_destroy();
+    header("Location: ../../Views/Login-Signup.php");
+    exit();
+}
 
 // Fetch the counts
 $chefsCount = $conn->query("SELECT COUNT(*) as count FROM Chefs")->fetch_assoc()['count'];
@@ -37,6 +43,7 @@ $conn->close();
                 <li><a href="../../Admin/View/Manage_Menu.php">Manage Menu</a></li>
                 <li><a href="../../Admin/View/Manage_Reservation.php">Manage Reservations</a></li>
                 <li><a href="../../Admin/View/Manage_Reviews.php">Manage Reviews</a></li>
+                <li><a href="?action=logout">Logout</a></li>
             </ul>
         </div>
     </nav>
