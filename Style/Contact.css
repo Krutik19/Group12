@@ -12,7 +12,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(6, 6, 6, 0.2);
-    width: 50%; /* Adjusted width to make it smaller */
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -84,4 +84,8 @@
 }
 .notification.error {
     background-color: #f44336;
+}
+.Contact-form{
+    position: relative;
+    z-index: 25;
 }
